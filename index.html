@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labirint</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="shortcut icon" type="x-icon" href="slike/volcano.png">
+
+</head>
+<body>
+    <div id="vizitka" onclick="vizitka()"></div>
+    <div id="naslov">
+        <h1>Volcano eruption</h1>
+    </div>
+    <div id="main">
+        <div id="labirint">
+            <canvas id="maze" width="500" height="500"></canvas>
+            <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+        <div id="controls">
+            <button type="button" id="navodila" class="gumb" onclick="navodila()">Navodila</button>
+            <button type="button" id="resitev" class="gumb" onclick="drawSolution()">Rešitev</button>
+            <button type="button" id="restart" class="gumb" onclick="reset()">Restart</button>
+            <select id="options" placeholder="Težavnost">
+                <option value="60">Lahko</option>
+                <option value="45">Srednje</option>
+                <option value="30">Težko</option>
+            </select>
+            <div id="cas">Čas:</div>
+            <h2 id="timer">60</h2>
+            
+        </div>
+       
+    </div>
+    
+    
+    
+
+
+    <script src="js/labirint.js"></script>
+    <script src="js/alerti.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(../slike/lava.png) fixed;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#main{
+    height: 70vh;
+    width: 50vw;
+    margin: 2vh auto 0;
+    padding: 5vh 5vw 0 5vw;
+}
+#naslov{
+    width: 42vw;
+    margin: 0 auto;
+    height: 10vh;
+    line-height: 10vh;
+    justify-content: center;
+    font-size: 1.8vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #F82A13;
+    background: #3D2D37;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    opacity: .96;
+}
+h1{
+    padding: 0 2vw;
+}
+#labirint{
+    width: 27.5vw;
+    height: 55vh;
+    padding: 4vh 0 0 2vw;
+    margin: 0 30vw 5vh 10vw;
+    background: #3D2D37;
+    box-shadow: 0 0 3vw 2vw #F82A13;
+    border-radius: 1.5vw;
+    border: .05vw solid #F82A13;
+}
+canvas{
+    position: absolute;
+    width: 26.5vw;
+    height: 26.5vw;
+}
+button,select{
+    margin: 0 .3vw;
+    height: 5.5vh;
+    width: 9vw;
+    color:#18121D;
+    background: #F82A13;
+    border-radius: 1.5vw;
+    border: .15vw solid #18121D;
+    cursor: pointer;
+    font-size: .8vw;
+}
+button:disabled, select:disabled {
+    background: #e22610; /* Slightly darker shade of the original background color */
+    color: #3D2D37; /* Lighter/duller text color to show it's disabled */
+    cursor: default;
+}
+/* Apply styles only when the button is enabled */
+button:enabled:hover, 
+select:enabled:hover, 
+button:enabled:focus, 
+select:enabled:focus {
+    background: #e22610; /* Slightly darker background on hover */
+    color: #3D2D37; /* Change text color to white on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 0 8px 4px #F82A13; /* Apply a glow effect */
+    outline: none; /* Remove default outline */
+}
+
+#controls{
+    margin: 0 0 0 1.5vw;
+    width: 45vw;
+    height: 7.5vh;
+    line-height: 7.5vh;
+    padding: .6vw;  
+    background: #3D2D37;
+    border-radius: 1.5vw;
+    opacity: .95; 
+}
+
+/* Center text inside the options (Note: Doesn't work in all browsers) */
+option {
+    text-align: center;
+}
+
+#cas{
+    margin: 0 .1vw;
+    height: 5vh;
+    width: 5vw;
+    color: #F24827;
+    display: inline;
+    font-size: 1.5vw;
+}
+
+#timer{
+    height: 5vw;
+    width: 5vw;
+    color: #F24827;
+    display: inline;
+    font-size: 1.5vw;
+}
+
+.swal-button-n{
+    margin: 0 125px 0 0;
+    background: #C9DAE1;
+}
+
+.swal-button-s{
+    margin: 0 125px 0 0;
+    background: #A5DC86;
+}
+
+.swal-button-f{
+    margin: 0 125px 0 0;
+    background: #F27474;
+}
+#vizitka{
+    height: 10vh;
+    width: 1.2vw;
+    position: absolute;
+    top: 0;
+    right: 16.5vw;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    button,select{
+        margin: -8px 1px 0;
+        width: 8vw;
+    }
+    
+    
+}
+@media screen and (max-width: 500px) {
+    #controls{
+        height: 12vh;
+    }
+    select{
+        width: 9vw;
+    }
+}
+
+
+
+
+
+
