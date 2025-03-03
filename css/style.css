@@ -49,7 +49,7 @@ canvas{
     width: 26.5vw;
     height: 26.5vw;
 }
-button,select{
+.gumb,select{
     margin: 0 .3vw;
     height: 5.5vh;
     width: 9vw;
@@ -66,9 +66,9 @@ button:disabled, select:disabled {
     cursor: default;
 }
 /* Apply styles only when the button is enabled */
-button:enabled:hover, 
+.gumb:enabled:hover, 
 select:enabled:hover, 
-button:enabled:focus, 
+.gumb:enabled:focus, 
 select:enabled:focus {
     background: #e22610; /* Slightly darker background on hover */
     color: #3D2D37; /* Change text color to white on hover */
