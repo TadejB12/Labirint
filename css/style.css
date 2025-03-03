@@ -111,17 +111,17 @@ option {
 }
 
 .swal-button-n{
-    margin:0 125px 0 0;
+    margin:0 50px 0 0;
     background: #C9DAE1;
 }
 
 .swal-button-s{ 
-    margin:0 125px 0 0;
+    margin:0 50px 0 0;
     background: #A5DC86;
 }
 
 .swal-button-f{
-    margin:0 125px 0 0;
+    margin:0 50px 0 0;
     background: #F27474;
 }
 .swal-footer{
