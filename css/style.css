@@ -111,17 +111,18 @@ option {
 }
 
 .swal-button-n{
-    margin: 0 200px 0 0;
     background: #C9DAE1;
 }
 
 .swal-button-s{
-    margin: 0 200px 0 0;
     background: #A5DC86;
 }
 
 .swal-button-f{
     background: #F27474;
+}
+.swal-footer{
+    text-align: center;
 }
 #vizitka{
     height: 10vh;
