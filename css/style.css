@@ -49,6 +49,7 @@ canvas{
     height: 26.5vw;
 }
 .gumb,select{
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0 .3vw;
     height: 5.5vh;
     width: 9vw;
