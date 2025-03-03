@@ -119,8 +119,8 @@ function drawMaze(){
     ctx.miterLimit = 4;
     ctx.font = "15px";
     ctx.scale(1.0, 1.0);
-    ctx.fillStyle = "#0A0A16";
-    ctx.strokeStyle = "#0A0A16";
+    ctx.fillStyle = "#F82A13";
+    ctx.strokeStyle = "#F82A13";
     ctx.lineWidth = 2;
     ctx.lineCap = "square";
 
