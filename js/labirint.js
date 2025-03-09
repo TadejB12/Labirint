@@ -337,7 +337,7 @@ function hint() {
     // Function to clear the solution after 1 second
     setTimeout(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }, 1000);
+    }, 900);
 }
 
         const canvas = document.getElementById("canvas");
