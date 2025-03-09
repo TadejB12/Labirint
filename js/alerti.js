@@ -1,7 +1,7 @@
 function navodila(){
     swal({
         title: 'Navodila:',
-        text: 'Za premikanje uporabi puščice na tipkovnici. Cilj igre je priti na vrh labirinta.',
+        text: 'Za premikanje uporabi puščice na tipkovnici. Z pritiskom na presledek dobiš namig. Cilj igre je priti na vrh labirinta.',
         icon: 'info',
         button: {
             text: 'OK',
