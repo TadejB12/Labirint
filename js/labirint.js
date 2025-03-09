@@ -263,6 +263,7 @@ function erupting() {
         { x: 122, y: 474 }, { x: 170, y: 474 }, { x: 170, y: 458 }, { x: 202, y: 458 }, { x: 202, y: 474 }, { x: 250, y: 474 }, { x: 250, y: 478 }
     ];
     disableMovement();
+    stopCountdown();
 
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
@@ -638,6 +639,11 @@ function startCountdown(duration) {
     }, 1000);
 }
 
+// Function to stop countdown
+function stopCountdown() {
+    clearInterval(countdown);
+}
+
 // Keydown event to start timer only once
 document.addEventListener("keydown", function(event) {
     if (event.key === "ArrowUp" && !timerStarted) {
@@ -732,7 +738,7 @@ function reset() {
     finished = false;
     alert = false;
     timerStarted = false;
-
+    hintCount = 0;
     
     clearInterval(eruptionInterval); // Stop any ongoing eruption animation
     clearInterval(countdown); // Stop the countdown
