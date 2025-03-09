@@ -657,6 +657,7 @@ function startCountdown(duration) {
         if (timeLeft < 0) {
             clearInterval(countdown);
             timerElement.textContent = "0";
+            disableMovement();
             swal({
                 title: 'Speči vulkan:',
                 text: 'Zmankalo ti je časa. Izbruh neuspešen.',
