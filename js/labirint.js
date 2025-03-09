@@ -613,12 +613,45 @@ selectElement.addEventListener("change", function() {
     timerElement.textContent = selectElement.value; // Update text
 });
 
+function beep(frequency = 2000, duration = 100, volume = 1) {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain(); // Create a gain node for volume control
+
+    oscillator.type = "sine"; // You can change this to "square", "sawtooth", or "triangle"
+    oscillator.frequency.value = frequency; // Frequency in Hz (440 Hz = A4)
+
+    gainNode.gain.value = volume; // Set volume (0 is silent, 1 is normal, >1 for stronger)
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.start();
+    setTimeout(() => {
+        oscillator.stop();
+        audioContext.close();
+    }, duration);
+}
+
+
 // Function to start countdown
 function startCountdown(duration) {
     let timeLeft = duration;
 
     countdown = setInterval(() => {
         timerElement.textContent = timeLeft;
+        
+        // Check if time left is below 10 seconds
+        if (timeLeft > 0) {
+            if (timeLeft < 10) {
+                // Play a stronger, faster beep sound when time is less than 10 seconds
+                beep(2000, 80, 1.5);  // Increase the volume (1.5 for stronger sound) and reduce duration
+            } else {
+                // Play normal beep sound
+                beep();
+            }
+        }
+
         timeLeft--;
 
         if (timeLeft < 0) {
