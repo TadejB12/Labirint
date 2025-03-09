@@ -36,7 +36,7 @@ h1{
 }
 #labirint{
     width: 27.5vw;
-    height: 53vh;
+    height: 55vh;
     padding: 4vh 0 0 2vw;
     margin: 0 30vw 5vh 10vw;
     background: #3D2D37;
@@ -51,9 +51,9 @@ canvas{
 }
 .gumb,select{
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 .3vw;
+    margin: 0 .5vw;
     height: 5.5vh;
-    width: 9vw;
+    width: 10vw;
     color:#18121D;
     background: #F82A13;
     border-radius: 1.5vw;
