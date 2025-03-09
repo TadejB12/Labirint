@@ -302,6 +302,44 @@ function erupting() {
     const interval = setInterval(animate, 3); // Adjust speed (smaller = smoother)
 }
 
+function hint() {
+    const solution = [
+        { x: 234, y: 4 }, { x: 234, y: 26 }, { x: 250, y: 26 }, { x: 250, y: 74 }, { x: 266, y: 74 }, { x: 266, y: 90 }, { x: 282, y: 90 },
+        { x: 282, y: 58 }, { x: 298, y: 58 }, { x: 298, y: 10 }, { x: 314, y: 10 }, { x: 314, y: 26 }, { x: 346, y: 26 }, { x: 346, y: 10 }, { x: 362, y: 10 },
+        { x: 362, y: 42 }, { x: 314, y: 42 }, { x: 314, y: 74 }, { x: 330, y: 74 }, { x: 330, y: 58 }, { x: 362, y: 58 }, { x: 362, y: 74 },
+        { x: 346, y: 74 }, { x: 346, y: 90 }, { x: 330, y: 90 }, { x: 330, y: 138 }, { x: 298, y: 138 }, { x: 298, y: 122 }, { x: 314, y: 122 },
+        { x: 314, y: 90 }, { x: 298, y: 90 }, { x: 298, y: 106 }, { x: 218, y: 106 }, { x: 218, y: 122 }, { x: 282, y: 122 }, { x: 282, y: 138 },
+        { x: 266, y: 138 }, { x: 266, y: 154 }, { x: 346, y: 154 }, { x: 346, y: 170 }, { x: 314, y: 170 }, { x: 314, y: 186 }, { x: 378, y: 186 },
+        { x: 378, y: 202 }, { x: 346, y: 202 }, { x: 346, y: 234 }, { x: 362, y: 234 }, { x: 362, y: 250 }, { x: 346, y: 250 }, { x: 346, y: 282 },
+        { x: 362, y: 282 }, { x: 362, y: 266 }, { x: 394, y: 266 }, { x: 394, y: 298 }, { x: 426, y: 298 }, { x: 426, y: 314 }, { x: 394, y: 314 },
+        { x: 394, y: 330 }, { x: 426, y: 330 }, { x: 426, y: 346 }, { x: 442, y: 346 }, { x: 442, y: 362 }, { x: 426, y: 362 }, { x: 426, y: 378 },
+        { x: 330, y: 378 }, { x: 330, y: 394 }, { x: 314, y: 394 }, { x: 314, y: 378 }, { x: 298, y: 378 }, { x: 298, y: 394 }, { x: 282, y: 394 },
+        { x: 282, y: 410 }, { x: 298, y: 410 }, { x: 298, y: 426 }, { x: 266, y: 426 }, { x: 266, y: 410 }, { x: 218, y: 410 }, { x: 218, y: 426 },
+        { x: 234, y: 426 }, { x: 234, y: 442 }, { x: 250, y: 442 }, { x: 250, y: 458 }, { x: 218, y: 458 }, { x: 218, y: 442 }, { x: 122, y: 442 },
+        { x: 122, y: 474 }, { x: 170, y: 474 }, { x: 170, y: 458 }, { x: 202, y: 458 }, { x: 202, y: 474 }, { x: 250, y: 474 }, { x: 250, y: 478 }
+    ];
+
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Draw the full solution path instantly
+    ctx.strokeStyle = "#F24827";
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.moveTo(solution[0].x, solution[0].y);
+    
+    for (let i = 1; i < solution.length; i++) {
+        ctx.lineTo(solution[i].x, solution[i].y);
+    }
+    
+    ctx.stroke();
+
+    // Function to clear the solution after 1 second
+    setTimeout(() => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }, 1000);
+}
+
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
 
@@ -322,6 +360,23 @@ function erupting() {
         // Listen for key presses
         window.addEventListener("keydown", (e) => { keys[e.key] = true; });
         window.addEventListener("keyup", (e) => { keys[e.key] = false; });
+
+let hintCount = 0;
+
+        // Listen for key presses
+        window.addEventListener("keydown", (e) => { 
+            keys[e.key] = true;
+
+            // Ensure hint is triggered only once per key press
+            if (e.key === " " && hintCount < 3) { 
+                hint();
+                hintCount++;
+            }
+        });
+
+        window.addEventListener("keyup", (e) => { 
+            keys[e.key] = false;
+        });
 
         function update() {
             if(movementEnabled){
