@@ -135,6 +135,9 @@ option {
     top: 0;
     right: 16.5vw;
 }
+#vizitka:hover{
+    cursor: pointer;
+}
 
 
 
