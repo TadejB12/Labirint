@@ -1,8 +1,6 @@
-Za svojo projekto nalogo sem naredil labirint na temi vulkana.
-![SlikaStran](https://github.com/user-attachments/assets/f00b192a-b6ff-490f-ac39-885e65f235ed)
-
-Če rešiš labirint vulkan izbruhne in zmagaš.
-![SlikaIzbruh](https://github.com/user-attachments/assets/4e3cffe1-a4bb-4353-b049-b6d758109f4a)
-
-Če ti zmanka časa vulkan zaspi in izgubiš.
-![SlikaZgubu](https://github.com/user-attachments/assets/cc699a1f-a04b-4124-ab44-f61692881d2c)
+Za svojo projekto nalogo sem naredil labirint na temi vulkana (slika 1).
+Če ti zmanka časa vulkan zaspi in izgubiš (slika 2).
+Če rešiš labirint vulkan izbruhne in zmagaš (slika 3).
+![Slika1](https://github.com/user-attachments/assets/affe082e-9431-4f54-8437-ef76e03347a5)
+![Slika2](https://github.com/user-attachments/assets/42d54c2b-33a9-4366-88cd-4b986ef7e3cf)
+![Slika3](https://github.com/user-attachments/assets/ff978f72-dad7-41fd-9f24-858f40ca476c)
